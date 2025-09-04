@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { apiRouter } from './routes/apiRoutes'
+import { apiRouter } from './routes/apiRoutes.js'
 
 export const app = express()
 
