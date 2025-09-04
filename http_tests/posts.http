@@ -1,0 +1,14 @@
+###GET ALL POSTS
+GET http://localhost:8000/api/posts
+
+###CREATE A POST
+POST http://localhost:8000/api/posts
+Content-Type:  application/json
+
+{
+    "title": "title",
+    "desc": "description",
+    "author": "68b631056d66f7a478f0a13c",
+    "comments": [],
+    "likes": 1
+}

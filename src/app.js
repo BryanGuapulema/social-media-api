@@ -4,6 +4,6 @@ import { apiRouter } from './routes/apiRoutes.js'
 
 export const app = express()
 
-app.use(cors)
+app.use(cors())
 app.use(express.json())
 app.use('/api', apiRouter)

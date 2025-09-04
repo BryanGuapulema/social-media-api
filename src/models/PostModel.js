@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-export const postShemma = new mongoose.Schema(
+export const PostShemma = new mongoose.Schema(
   {
     title: {
       type: String,
