@@ -16,3 +16,9 @@ POST http://localhost:8000/api/unfollow/68b92aeaf993cc197805622c
 
 ###GET ALL FOLLOWS
 GET http://localhost:8000/api/follow
+
+###GET FOLLOWS OF USER
+GET http://localhost:8000/api/user/follows/68b92aeaf993cc197805622c
+
+###GET FOLLOWERS OF USER
+GET http://localhost:8000/api/user/followers/68b92aeaf993cc197805622c

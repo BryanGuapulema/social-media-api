@@ -36,3 +36,5 @@ apiRouter.get('/user/:id', UserController.getUserById)
 
 // follows
 apiRouter.get('/follow', FollowController.getAllFollows)
+apiRouter.get('/user/follows/:id', FollowController.getFollowing)
+apiRouter.get('/user/followers/:id', FollowController.getFollowers)
