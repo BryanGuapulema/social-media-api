@@ -32,3 +32,6 @@ apiRouter.get('/user/:id', UserController.getUserById)
 // apiRouter.get('/posts/:id', PostsController.getPostById)
 // apiRouter.put('/posts/:id', PostsController.updatePost)
 // apiRouter.delete('/posts/:id', PostsController.deletePost)
+
+// follows
+apiRouter.get('/follow', FollowController.getAllFollows)

@@ -7,4 +7,16 @@ export class FollowRepository {
   static async followUser (data) {
     return await Follow.create(data)
   }
+
+  static async getAllFollows () {
+    return await Follow.find()
+  }
+
+  static async getFollowing (id) {
+    return await Follow.find({ from_user: id })
+  }
+
+  static async getFollowers (id) {
+    return await Follow.find({ to_user: id })
+  }
 }
