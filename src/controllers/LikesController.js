@@ -18,4 +18,22 @@ export class LikeController {
       return res.json({ message: 'success' }) // don't repeat the like
     }
   }
+
+  static async deleteLike (req, res) {
+    const userId = testUserId
+    const postId = req.params.id
+
+    const validPost = await PostsRepository.getPostById(postId)
+    if (!validPost) return res.status(404).json({ Error: 'Post not valid' })
+
+    const likeExist = await LikeRepository.checkLikeByPostId(postId)
+    if (likeExist) {
+      try {
+        await LikeRepository.deleteLike(userId, postId)
+        return res.json({ message: 'success' })
+      } catch (error) {
+        res.json(error)
+      }
+    }
+  }
 }

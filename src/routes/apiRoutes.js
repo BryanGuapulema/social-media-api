@@ -24,3 +24,4 @@ apiRouter.delete('/posts/:id', PostsController.deletePost)
 
 // like
 apiRouter.post('/like/:id', LikeController.createLike)
+apiRouter.post('/unlike/:id', LikeController.deleteLike)

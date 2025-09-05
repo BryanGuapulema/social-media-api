@@ -11,4 +11,8 @@ export class LikeRepository {
   static async checkLikeByPostId (postId) {
     return await Like.findOne({ postId })
   }
+
+  static async deleteLike (userId, postId) {
+    return await Like.deleteOne({ userId, postId })
+  }
 }
