@@ -24,4 +24,4 @@ Content-Type:  application/json
 }
 
 ###DELETE A POST 
-DELETE http://localhost:8000/api/posts/68b92399b53305f24dbb2d30
+DELETE http://localhost:8000/api/posts/68bb3fb1b1fcd41a410136ed

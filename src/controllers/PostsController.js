@@ -94,6 +94,6 @@ export default class PostsController {
 
     const postDeleted = await PostsRepository.deletePost(id)
     if (!postDeleted) return res.status(404).json({ message: 'Post not found' })
-    return res.json(postDeleted)
+    return res.json({ message: 'deleted' })
   }
 }

@@ -85,7 +85,7 @@ Response:
 */
 
 
-### @ api/posts/id
+### DELETE @ api/posts/id ✅
 /*
 DELETE @ api/posts/id
 Delete a post

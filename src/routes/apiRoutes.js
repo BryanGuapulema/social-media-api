@@ -13,6 +13,7 @@ apiRouter.get('/posts', PostsController.getPosts)
 apiRouter.get('/posts/:id', PostsController.getPostById)
 apiRouter.post('/posts', PostsController.createPosts)
 apiRouter.put('/posts/:id', PostsController.updatePost)
+apiRouter.delete('/posts/:id', PostsController.deletePost)
 apiRouter.post('/like/:id', LikeController.createLike)
 apiRouter.post('/unlike/:id', LikeController.deleteLike)
 
