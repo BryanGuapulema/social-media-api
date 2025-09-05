@@ -3,6 +3,7 @@ import PostsController from '../controllers/PostsController.js'
 import { UserController } from '../controllers/UserController.js'
 import { LikeController } from '../controllers/LikesController.js'
 import { FollowController } from '../controllers/FollowController.js'
+import { CommentController } from '../controllers/CommentController.js'
 export const apiRouter = Router()
 
 apiRouter.get('/', (req, res) => {
@@ -20,6 +21,7 @@ apiRouter.post('/unfollow/:id', FollowController.unfollowUser)
 apiRouter.get('/user/:id', UserController.getUserById)
 apiRouter.post('/like/:id', LikeController.createLike)
 apiRouter.post('/unlike/:id', LikeController.deleteLike)
+apiRouter.post('/comment/:id', CommentController.createComment)
 
 // // users
 apiRouter.post('/user', UserController.createUser)
@@ -36,6 +38,11 @@ apiRouter.get('/user', UserController.getAllUsers)
 // apiRouter.delete('/posts/:id', PostsController.deletePost)
 
 // follows
-apiRouter.get('/follow', FollowController.getAllFollows)
-apiRouter.get('/user/follows/:id', FollowController.getFollowing)
-apiRouter.get('/user/followers/:id', FollowController.getFollowers)
+// apiRouter.get('/follow', FollowController.getAllFollows)
+// apiRouter.get('/user/follows/:id', FollowController.getFollowing)
+// apiRouter.get('/user/followers/:id', FollowController.getFollowers)
+
+// comments
+apiRouter.get('/comment', CommentController.getAllComents)
+apiRouter.get('/comment/user/:id', CommentController.getCommentsofUser)
+apiRouter.get('/comment/post/:id', CommentController.getCommentsForPost)

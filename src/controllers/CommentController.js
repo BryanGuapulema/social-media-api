@@ -1,8 +1,8 @@
-import { testUserId } from '../config/userForTest'
-import { CommentRepository } from '../repositories/CommentRepository'
-import { PostsRepository } from '../repositories/PostsRepository'
-import { UserRepository } from '../repositories/UserRepository'
-import { validateComment } from '../validations/CommentValidation'
+import { testUserId } from '../config/userForTest.js'
+import { CommentRepository } from '../repositories/CommentRepository.js'
+import { PostsRepository } from '../repositories/PostsRepository.js'
+import { UserRepository } from '../repositories/UserRepository.js'
+import { validateComment } from '../validations/CommentValidation.js'
 
 export class CommentController {
   static async createComment (req, res) {
@@ -14,9 +14,9 @@ export class CommentController {
 
     if (!result.success) return res.status(400).json({ error: JSON.parse(result.error) })
 
-    const { message } = result.data
+    const { comment } = result.data
 
-    const newComment = await CommentRepository.createComment({ message, userId: testUserId, postId })
+    const newComment = await CommentRepository.createComment({ comment, userId: testUserId, postId })
 
     if (newComment) return res.json({ message: 'success' })
   }

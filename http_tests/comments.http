@@ -1,0 +1,16 @@
+###GET ALL COMMENTS
+GET http://localhost:8000/api/comment
+
+###CREATE A COMMENT FOR A POST
+POST http://localhost:8000/api/comment/68bb401b123181c32490f239
+Content-Type: application/json
+
+{
+    "comment": "Post comment"
+}
+
+###GET ALL COMMENTS OF A POST
+GET http://localhost:8000/api/comment/post/68b92399b53305f24dbb2d30
+
+###GET ALL COMMENTS OF A USER
+GET http://localhost:8000/api/comment/user/68b92aeaf993cc197805622c

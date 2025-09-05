@@ -162,7 +162,7 @@ Response:
 */
 
 
-### POST @ /api/comment/id
+### POST @ /api/comment/id ✅
 /*
 POST @ /api/comment/id
 Comment on post with id. Comment is made by user with id 1
