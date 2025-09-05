@@ -17,7 +17,7 @@ Expected format:
     "data": [
         {
             "id": 1,
-            "image": "Test image url",
+            "title": "Test title",
             "description": "Test description 1",
             "user": "Test User 2",
             "createdAt": "2021-09-16 16:00:00"
@@ -28,7 +28,7 @@ Expected format:
 
 
 
-### @ /api/posts/id
+### GET @ /api/posts/id
 /*
 GET @ /api/posts/id
 Returns single post
@@ -37,7 +37,7 @@ Expected Format:
     "message": "success",
     "data": {
         "id": 2,
-        "image": "Test image url 2",
+        "title": "Test title url 2",
         "description": "Test description 2",
         "user": "Test User 3",
         "createdAt": "2021-09-16 17:00:00",
@@ -54,13 +54,13 @@ NOTE: If intermediate tasks have been omitted then return comments as an empty a
 */
 
 
-### @ /api/posts
+### POST @ /api/posts
 /*
 POST @ /api/posts
 Add a post
 Req body Example:
 {
-    image: "Unit test image",
+    title: "Unit test title",
     description: "Unit test"
 }
 Response:
@@ -75,7 +75,7 @@ PUT @ api/posts/id
 Update a single post
 Req body:
 {
-    image: "Unit test image",
+    title: "Unit test title",
     description: "Unit test"
 }
 Response:

@@ -40,8 +40,8 @@ API Endpoints
 	DELETE api/posts/{id} would delete post with {id} ✅
 	POST api/follow/{id} would follow user with {id} 
 	POST api/unfollow/{id} would unfollow user with {id} 
-	POST /api/like/{id} like a post with {id} 
-	POST /api/unlike/{id} would unlike post with {id} 
+	POST /api/like/{id} like a post with {id} ✅
+	POST /api/unlike/{id} would unlike post with {id} ✅
 	POST /api/comment/{id} add comment for post with {id} 
 Tables 
 	User 

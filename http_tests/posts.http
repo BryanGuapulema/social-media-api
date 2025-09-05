@@ -10,11 +10,8 @@ POST http://localhost:8000/api/posts
 Content-Type:  application/json
 
 {
-    "title": "title",
-    "desc": "description",
-    "author": "68b631056d66f7a478f0a13c",
-    "comments": [],
-    "likes": 1
+    "title": "title4",
+    "desc": "description4"
 }
 
 ###UPDATE A POST

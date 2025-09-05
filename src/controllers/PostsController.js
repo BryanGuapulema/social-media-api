@@ -1,3 +1,4 @@
+import { testUserId } from '../config/userForTest.js'
 import { PostsRepository } from '../repositories/PostsRepository.js'
 import { validatePost } from '../validations/PostValidation.js'
 
@@ -9,6 +10,7 @@ export default class PostsController {
       post = {
         id: post._id,
         title: post.title,
+        description: post.desc,
         user: post.author.username,
         createdAt: post.createdAt
       }
@@ -28,8 +30,17 @@ export default class PostsController {
 
     if (!result.success) return res.status(400).json({ message: JSON.parse(result.error) })
 
-    const newPost = await PostsRepository.createPost(result.data)
-    res.status(201).json(newPost)
+    const { title, desc } = result.data
+
+    const postFormatted = {
+      title,
+      desc,
+      author: testUserId
+
+    }
+
+    await PostsRepository.createPost(postFormatted)
+    res.status(201).json({ message: 'success' })
   }
 
   static async getPostById (req, res) {

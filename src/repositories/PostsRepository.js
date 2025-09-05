@@ -5,11 +5,11 @@ const Post = mongoose.model('Post', PostShemma)
 
 export class PostsRepository {
   static async getPosts () {
-    return await Post.find().populate('author')
+    return await Post.find().populate('author').sort({ createdAt: -1 })// sorted descending
   }
 
   static async createPost (data) {
-    return await Post.create(data).populate('author')
+    return await Post.create(data)
   }
 
   static async getPostById (id) {
