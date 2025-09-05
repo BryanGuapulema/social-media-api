@@ -5,15 +5,15 @@ const Post = mongoose.model('Post', PostShemma)
 
 export class PostsRepository {
   static async getPosts () {
-    return await Post.find()
+    return await Post.find().populate('author')
   }
 
   static async createPost (data) {
-    return await Post.create(data)
+    return await Post.create(data).populate('author')
   }
 
   static async getPostById (id) {
-    return await Post.findById(id)
+    return await Post.findById(id).populate('author')
   }
 
   static async updatePost (id, data) {

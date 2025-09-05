@@ -4,7 +4,23 @@ import { validatePost } from '../validations/PostValidation.js'
 export default class PostsController {
   static async getPosts (req, res) {
     const posts = await PostsRepository.getPosts()
-    res.json(posts)
+
+    const data = posts.map(post => {
+      post = {
+        id: post._id,
+        title: post.title,
+        user: post.author.username,
+        createdAt: post.createdAt
+      }
+      return post
+    }
+
+    )
+    const resultFormated = {
+      message: 'success',
+      data
+    }
+    res.json(resultFormated)
   }
 
   static async createPosts (req, res) {
