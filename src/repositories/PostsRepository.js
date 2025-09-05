@@ -8,7 +8,19 @@ export class PostsRepository {
     return await Post.find()
   }
 
-  static async create (data) {
+  static async createPost (data) {
     return await Post.create(data)
+  }
+
+  static async getPostById (id) {
+    return await Post.findById(id)
+  }
+
+  static async updatePost (id, data) {
+    return await Post.findByIdAndUpdate(id, data, { new: true })
+  }
+
+  static async deletePost (id) {
+    return await Post.findByIdAndDelete(id)
   }
 }
