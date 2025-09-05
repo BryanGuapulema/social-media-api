@@ -2,6 +2,10 @@
 GET  http://localhost:8000/api/users 
 
 
+###GET USER BY ID
+GET  http://localhost:8000/api/users/68b92aeaf993cc197805622c
+
+
 
 ###CREATE NEW USER
 POST http://localhost:8000/api/users 
@@ -10,4 +14,13 @@ Content-Type: application/json
 {
     "username": "username",
     "password": "12345678"
+}
+
+###UPDATE USER
+PUT http://localhost:8000/api/users/68b92aeaf993cc197805622c 
+Content-Type: application/json
+
+{
+    "username": "usernameUpdated2",
+    "password": "1357911112"
 }
