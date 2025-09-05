@@ -36,4 +36,13 @@ export class LikeController {
       }
     }
   }
+
+  static async checkLikesForPost (req, res) {
+    const postId = req.params.id
+    const validPost = await PostsRepository.getPostById(postId)
+    if (!validPost) return res.status(404).json({ Error: 'Post not valid' })
+
+    const likes = await LikeRepository.checkLikesForPost(postId)
+    return res.json(likes)
+  }
 }

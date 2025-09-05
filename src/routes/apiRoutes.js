@@ -37,6 +37,9 @@ apiRouter.get('/user', UserController.getAllUsers)
 // apiRouter.put('/posts/:id', PostsController.updatePost)
 // apiRouter.delete('/posts/:id', PostsController.deletePost)
 
+// likes
+apiRouter.get('/posts/like/:id', LikeController.checkLikesForPost)
+
 // follows
 // apiRouter.get('/follow', FollowController.getAllFollows)
 // apiRouter.get('/user/follows/:id', FollowController.getFollowing)

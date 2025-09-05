@@ -5,3 +5,5 @@ POST http://localhost:8000/api/like/68b92399b53305f24dbb2d30
 ###UNLIKE A POST
 POST http://localhost:8000/api/unlike/68b92399b53305f24dbb2d30
 
+###CHECK LIKES FOR A POST
+GET http://localhost:8000/api/posts/like/68b92399b53305f24dbb2d30

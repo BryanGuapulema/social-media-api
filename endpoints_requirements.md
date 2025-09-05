@@ -99,7 +99,7 @@ Response:
 ### POST @ api/follow/id ✅
 /*
 POST @ api/follow/id
-Follow user with id. Follow request to be sent by user with id 1.
+Follow user with id. Follow request to be sent by user with id '68b92aeaf993cc197805622c'.
 Empty body.
 Response:
 {
@@ -111,7 +111,7 @@ Response:
 ### POST @ api/unfollow/id  ✅
 /*
 POST @ api/unfollow/id
-UnFollow user with id. UnFollow request to be sent by user with id 1.
+UnFollow user with id. UnFollow request to be sent by user with id '68b92aeaf993cc197805622c'.
 Empty body.
 Response:
 {
@@ -141,7 +141,7 @@ Responnse Example:
 ### @ api/like/id ✅
 /*
 POST @ api/like/id
-Like post with id. Like is made by user with id 1.
+Like post with id. Like is made by user with id '68b92aeaf993cc197805622c'.
 Empty body.
 Response:
 {
@@ -153,7 +153,7 @@ Response:
 ### @ api/unlike/id ✅
 /*
 POST @ api/unlike/id
-UnLike post with id. UnLike is made by user with id 1.
+UnLike post with id. UnLike is made by user with id '68b92aeaf993cc197805622c'.
 Empty body.
 Response:
 {
@@ -165,7 +165,7 @@ Response:
 ### POST @ /api/comment/id ✅
 /*
 POST @ /api/comment/id
-Comment on post with id. Comment is made by user with id 1
+Comment on post with id. Comment is made by user with id '68b92aeaf993cc197805622c'
 Request Body:
 {
     comment: "Post comment"

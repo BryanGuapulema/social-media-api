@@ -8,8 +8,8 @@ export class LikeRepository {
     return await Like.create(input)
   }
 
-  static async checkLikeByPostId (postId) {
-    return await Like.findOne({ postId })
+  static async checkLikesForPost (postId) {
+    return await Like.find({ postId })
   }
 
   static async deleteLike (userId, postId) {

@@ -1,6 +1,8 @@
 import { testUserId } from '../config/userForTest.js'
 import { PostsRepository } from '../repositories/PostsRepository.js'
 import { validatePost } from '../validations/PostValidation.js'
+import { CommentRepository } from '../repositories/CommentRepository.js'
+import { LikeRepository } from '../repositories/LikesRepository.js'
 
 export default class PostsController {
   static async getPosts (req, res) {
@@ -50,14 +52,26 @@ export default class PostsController {
 
     if (!post) return res.status(404).json({ message: 'Post not found' })
 
+    const likes = await LikeRepository.checkLikesForPost(id)
+
+    const postComments = await CommentRepository.getCommentsForPost(id)
+    const postCommentsFormatted = postComments.map(
+      comment => {
+        return {
+          comment: comment.comment,
+          name: comment.userId.username
+        }
+      }
+    )
+
     const data = {
       id: post._id,
       title: post.title,
       description: post.desc,
       user: post.author.username,
       createdAt: post.createdAt,
-      likes: post.likes,
-      comments: post.comments // todo:comments implementation
+      likes: likes.length,
+      comments: postCommentsFormatted // todo:comments implementation
     }
 
     const resultFormated = {
