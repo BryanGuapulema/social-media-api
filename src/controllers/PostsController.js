@@ -74,11 +74,19 @@ export default class PostsController {
     const result = validatePost(req.body)
     if (!result.success) return res.status(400).json({ message: JSON.parse(result.error) })
 
-    const updatedPost = await PostsRepository.updatePost(id, result.data)
+    const { title, desc } = result.data
+
+    const postFormatted = {
+      title,
+      desc,
+      author: testUserId
+    }
+
+    const updatedPost = await PostsRepository.updatePost(id, postFormatted)
 
     if (!updatedPost) return res.status(404).json({ message: 'Post not found' })
 
-    return res.json(updatedPost)
+    return res.json({ message: 'success' })
   }
 
   static async deletePost (req, res) {

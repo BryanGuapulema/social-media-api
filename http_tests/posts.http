@@ -20,10 +20,7 @@ Content-Type:  application/json
 
 {
     "title": "titleUpdated",
-    "desc": "description",
-    "author": "68b631056d66f7a478f0a13c",
-    "comments": [],
-    "likes": 1
+    "desc": "descriptionUpdated"
 }
 
 ###DELETE A POST 

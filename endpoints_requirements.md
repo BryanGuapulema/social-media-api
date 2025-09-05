@@ -28,7 +28,7 @@ Expected format:
 
 
 
-### GET @ /api/posts/id
+### GET @ /api/posts/id 🟡
 /*
 GET @ /api/posts/id
 Returns single post
@@ -54,7 +54,7 @@ NOTE: If intermediate tasks have been omitted then return comments as an empty a
 */
 
 
-### POST @ /api/posts
+### POST @ /api/posts ✅
 /*
 POST @ /api/posts
 Add a post
@@ -69,7 +69,7 @@ Response:
 }
 */
 
-### @ api/posts/id
+### PUT @ api/posts/id ✅
 /*
 PUT @ api/posts/id
 Update a single post
