@@ -1,6 +1,10 @@
 ###GET ALL POSTS
 GET http://localhost:8000/api/posts
 
+###GET POST BY ID
+GET http://localhost:8000/api/posts/68b92399b53305f24dbb2d30
+
+
 ###CREATE A POST
 POST http://localhost:8000/api/posts
 Content-Type:  application/json
@@ -12,3 +16,18 @@ Content-Type:  application/json
     "comments": [],
     "likes": 1
 }
+
+###UPDATE A POST
+PUT http://localhost:8000/api/posts/68b92399b53305f24dbb2d30
+Content-Type:  application/json
+
+{
+    "title": "titleUpdated",
+    "desc": "description",
+    "author": "68b631056d66f7a478f0a13c",
+    "comments": [],
+    "likes": 1
+}
+
+###DELETE A POST 
+DELETE http://localhost:8000/api/posts/68b92399b53305f24dbb2d30

@@ -24,3 +24,7 @@ Content-Type: application/json
     "username": "usernameUpdated2",
     "password": "1357911112"
 }
+
+
+###DELETE A USER
+DELETE http://localhost:8000/api/users/68b92aeaf993cc197805622c 
