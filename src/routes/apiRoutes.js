@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import PostsController from '../controllers/PostsController.js'
 import { UserController } from '../controllers/UserController.js'
+import { LikeController } from '../controllers/LikesController.js'
 export const apiRouter = Router()
 
 apiRouter.get('/', (req, res) => {
@@ -20,3 +21,6 @@ apiRouter.post('/posts', PostsController.createPosts)
 apiRouter.get('/posts/:id', PostsController.getPostById)
 apiRouter.put('/posts/:id', PostsController.updatePost)
 apiRouter.delete('/posts/:id', PostsController.deletePost)
+
+// like
+apiRouter.post('/like/:id', LikeController.createLike)

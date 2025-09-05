@@ -32,12 +32,12 @@ Write a backend in the tech stack mentioned below that exposes an API that retur
 Note: Requests will be made by the user with id {1}. Dummy users are present in the database.
 
 API Endpoints 
-	GET /api/user/{id} would return a user profile populated with a number of followers. 
-	GET /api/posts would return all posts sorted by post time. 
-	GET api/posts/{id} would return a single post populated with its number of likes and comments 
-	POST api/posts/ would add a new post. 
-	PUT api/posts/{id} would update a post with {id} 
-	DELETE api/posts/{id} would delete post with {id} 
+	GET /api/user/{id} would return a user profile populated with a number of followers. ⛔
+	GET /api/posts would return all posts sorted by post time ⛔. 
+	GET api/posts/{id} would return a single post populated with its number of likes and comments ⛔
+	POST api/posts/ would add a new post. ✅
+	PUT api/posts/{id} would update a post with {id} ✅
+	DELETE api/posts/{id} would delete post with {id} ✅
 	POST api/follow/{id} would follow user with {id} 
 	POST api/unfollow/{id} would unfollow user with {id} 
 	POST /api/like/{id} like a post with {id} 
