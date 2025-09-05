@@ -8,11 +8,11 @@ apiRouter.get('/', (req, res) => {
 })
 
 // users
-apiRouter.post('/users', UserController.createUser)
-apiRouter.get('/users', UserController.getAllUsers)
-apiRouter.get('/users/:id', UserController.getUserById)
-apiRouter.put('/users/:id', UserController.updateUser)
-apiRouter.delete('/users/:id', UserController.deleteUser)
+apiRouter.post('/user', UserController.createUser)
+apiRouter.get('/user', UserController.getAllUsers)
+apiRouter.get('/user/:id', UserController.getUserById)
+apiRouter.put('/user/:id', UserController.updateUser)
+apiRouter.delete('/user/:id', UserController.deleteUser)
 
 // posts
 apiRouter.get('/posts', PostsController.getPosts)
