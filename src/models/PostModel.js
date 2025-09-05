@@ -18,7 +18,8 @@ export const PostShemma = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId
     }],
     likes: {
-      type: Number
+      type: Number,
+      default: 0
     }
   },
   { timestamps: true }
