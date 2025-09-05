@@ -138,7 +138,7 @@ Responnse Example:
 */
 
 
-### @ api/like/id
+### @ api/like/id ✅
 /*
 POST @ api/like/id
 Like post with id. Like is made by user with id 1.
@@ -150,7 +150,7 @@ Response:
 */
 
 
-### @ api/unlike/id
+### @ api/unlike/id ✅
 /*
 POST @ api/unlike/id
 UnLike post with id. UnLike is made by user with id 1.
@@ -162,7 +162,7 @@ Response:
 */
 
 
-### @ /api/comment/id
+### POST @ /api/comment/id
 /*
 POST @ /api/comment/id
 Comment on post with id. Comment is made by user with id 1
