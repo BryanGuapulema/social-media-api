@@ -50,7 +50,22 @@ export default class PostsController {
 
     if (!post) return res.status(404).json({ message: 'Post not found' })
 
-    return res.json(post)
+    const data = {
+      id: post._id,
+      title: post.title,
+      description: post.desc,
+      user: post.author.username,
+      createdAt: post.createdAt,
+      likes: post.likes,
+      comments: post.comments // todo:comments implementation
+    }
+
+    const resultFormated = {
+      message: 'success',
+      data
+    }
+
+    return res.json(resultFormated)
   }
 
   static async updatePost (req, res) {

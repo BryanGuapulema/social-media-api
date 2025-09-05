@@ -33,7 +33,7 @@ Note: Requests will be made by the user with id {1}. Dummy users are present in 
 
 API Endpoints 
 	GET /api/user/{id} would return a user profile populated with a number of followers. ⛔
-	GET /api/posts would return all posts sorted by post time ⛔. 
+	GET /api/posts would return all posts sorted by post time ✅. 
 	GET api/posts/{id} would return a single post populated with its number of likes and comments ⛔
 	POST api/posts/ would add a new post. ✅
 	PUT api/posts/{id} would update a post with {id} ✅

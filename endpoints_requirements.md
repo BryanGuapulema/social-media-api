@@ -7,7 +7,7 @@ NOTE: Not found errors to be returned with 404 status and response as:
 All formats have to be matched to be scored against test cases.
 */
 
-### GET @ /api/posts
+### GET @ /api/posts.✅
 /*
 GET @ /api/posts
 Returns all posts
