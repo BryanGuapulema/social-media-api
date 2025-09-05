@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt'
 import { UserRepository } from '../repositories/UserRepository.js'
 import { validatePartialUser, validateUser } from '../validations/UserValidation.js'
+import { FollowRepository } from '../repositories/FollowRepository.js'
 
 export class UserController {
   static async createUser (req, res) {
@@ -26,7 +27,22 @@ export class UserController {
     const user = await UserRepository.getUserById(id)
 
     if (!user) return res.status(404).json({ message: 'User not found' })
-    return res.json(user)
+
+    const follows = await FollowRepository.getFollowing(user._id)
+    const followers = await FollowRepository.getFollowers(user._id)
+
+    const data = {
+      id: user._id,
+      name: user.username,
+      follows: follows.length,
+      followers: followers.length
+    }
+
+    const resultFormated = {
+      message: 'success',
+      data
+    }
+    return res.json(resultFormated)
   }
 
   static async updateUser (req, res) {

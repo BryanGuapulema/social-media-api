@@ -121,7 +121,7 @@ Response:
 
 
 
-### @ api/user/id
+### GET @ api/user/id ✅
 /*
 GET @ api/user/id
 Get user with no of followers and following.
@@ -130,8 +130,7 @@ Responnse Example:
     "message": "success",
     "data": {
         "id": 2,
-        "name": "Test User 2",
-        "bio": "Test bio 2",
+        "name": "Test User 2",        
         "follows": 1,
         "followers": 2
     }

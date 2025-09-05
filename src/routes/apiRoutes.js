@@ -17,13 +17,14 @@ apiRouter.put('/posts/:id', PostsController.updatePost)
 apiRouter.delete('/posts/:id', PostsController.deletePost)
 apiRouter.post('/follow/:id', FollowController.followUser)
 apiRouter.post('/unfollow/:id', FollowController.unfollowUser)
+apiRouter.get('/user/:id', UserController.getUserById)
 apiRouter.post('/like/:id', LikeController.createLike)
 apiRouter.post('/unlike/:id', LikeController.deleteLike)
 
 // // users
 apiRouter.post('/user', UserController.createUser)
 apiRouter.get('/user', UserController.getAllUsers)
-apiRouter.get('/user/:id', UserController.getUserById)
+// apiRouter.get('/user/:id', UserController.getUserById)
 // apiRouter.put('/user/:id', UserController.updateUser)
 // apiRouter.delete('/user/:id', UserController.deleteUser)
 
