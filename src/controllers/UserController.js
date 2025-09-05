@@ -7,7 +7,7 @@ export class UserController {
     const result = validateUser(req.body)
 
     // if (!result.success) return res.status(400).json({ message: result.error.map(e => e.message) })
-    if (!result.success) return res.status(400).json({ message: result.error })
+    if (!result.success) return res.status(400).json({ message: JSON.parse(result.error) })
 
     const { username, password } = result.data
     const hashedPassword = await bcrypt.hash(password, 10)
@@ -35,7 +35,7 @@ export class UserController {
     const result = validatePartialUser(req.body)
 
     // if (!result.success) return res.status(400).json({ message: result.error.map(e => e.message) })
-    if (!result.success) return res.status(400).json({ message: result.error })
+    if (!result.success) return res.status(400).json({ message: JSON.parse(result.error) })
 
     const { username, password } = result.data
     const user = await UserRepository.getUserById(id)
@@ -46,11 +46,9 @@ export class UserController {
 
     let userUpdated = null
     if (!isSamePass) {
-      console.log('different pass')
       const hashedPassword = await bcrypt.hash(password, 10)
       userUpdated = await UserRepository.updateUser(id, { username, password: hashedPassword })
     } else {
-      console.log('same pass')
       userUpdated = await UserRepository.updateUser(id, { username })
     }
 
