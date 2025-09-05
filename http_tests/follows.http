@@ -1,0 +1,6 @@
+###FOLLOW USER
+POST http://localhost:8000/api/follow/68bb4d0293f5e32dcc72d4e2
+
+
+###GET ALL FOLLOWS
+GET http://localhost:8000/api/follow

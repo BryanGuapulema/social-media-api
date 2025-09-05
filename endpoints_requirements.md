@@ -96,7 +96,7 @@ Response:
 */
 
 
-### @ api/follow/id
+### POST @ api/follow/id ✅
 /*
 POST @ api/follow/id
 Follow user with id. Follow request to be sent by user with id 1.
