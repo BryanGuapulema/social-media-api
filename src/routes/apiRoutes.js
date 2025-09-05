@@ -16,6 +16,7 @@ apiRouter.post('/posts', PostsController.createPosts)
 apiRouter.put('/posts/:id', PostsController.updatePost)
 apiRouter.delete('/posts/:id', PostsController.deletePost)
 apiRouter.post('/follow/:id', FollowController.followUser)
+apiRouter.post('/unfollow/:id', FollowController.unfollowUser)
 apiRouter.post('/like/:id', LikeController.createLike)
 apiRouter.post('/unlike/:id', LikeController.deleteLike)
 

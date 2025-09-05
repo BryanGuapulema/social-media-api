@@ -108,7 +108,7 @@ Response:
 */
 
 
-### @ api/unfollow/id
+### POST @ api/unfollow/id  ✅
 /*
 POST @ api/unfollow/id
 UnFollow user with id. UnFollow request to be sent by user with id 1.

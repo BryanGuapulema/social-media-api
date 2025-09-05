@@ -8,8 +8,10 @@ POST http://localhost:8000/api/follow/68bb4cf493f5e32dcc72d4dc
 POST http://localhost:8000/api/follow/68bb4cf893f5e32dcc72d4de
 ###
 POST http://localhost:8000/api/follow/68bb4cfe93f5e32dcc72d4e0
-###
-POST http://localhost:8000/api/follow/68bb4d0293f5e32dcc72d4e2
+
+
+###UNFOLLOW USER
+POST http://localhost:8000/api/unfollow/68b92aeaf993cc197805622c
 
 
 ###GET ALL FOLLOWS
