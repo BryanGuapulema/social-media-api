@@ -28,7 +28,7 @@ Expected format:
 
 
 
-### GET @ /api/posts/id 🟡
+### GET @ /api/posts/id ✅
 /*
 GET @ /api/posts/id
 Returns single post
